@@ -1,19 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
+import CompCreate from './components/Company/CompCreate'
+import CompHome from './components/Company/CompHome'
+import CompEdit from './components/Company/CompEdit'
+import CompShow from './components/Company/CompShow'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Router>
+
+    
+
+
+      <Switch>
+    
+        <Route exact path="/" component={CompHome} />
+    
+    
+        <Route exact path="/Company" component={CompHome} />
+        <Route exact path="/Company/Create" component={CompCreate} />
+        <Route exact path="/Company/:compId/Edit" component={CompEdit} />
+        <Route exact path="/Company/:compId" component={CompShow} />
+ 
+        
+    
+      </Switch>
+    
+    </Router>
+   
     );
   }
 }
