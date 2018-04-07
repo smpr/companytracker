@@ -1,10 +1,11 @@
 class Api::CompaniesController < ApplicationController
      def index
-        @companies = Company.ApplicationController
-        render json: @companies
+      puts "Index hit"
+      @companies = Company.all
+      render json: @companies
      end
      def create
-        puts "Create Hit"
+
      end
      def show
         puts "Show Hit"
