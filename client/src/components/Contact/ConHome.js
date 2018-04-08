@@ -25,7 +25,7 @@ class ConHome extends Component {
         return (
             <BodyContainer>
             <Container>
-                <Link to={`/Company/${this.props.match.params.compId}/Contacts/Create`}>Create a Contact</Link>
+                <Link to={`/Company/${this.props.match.params.compId}/Contact/Create`}>Create a Contact</Link>
                 <FormContainer>
             
             <ul>
