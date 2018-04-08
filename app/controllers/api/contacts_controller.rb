@@ -5,34 +5,35 @@ class Api::ContactsController < ApplicationController
         render json: @contacts
        end
        def create
-          @Company = Company.new(company_params)
+        puts "Contact Create Hit"
+          @Contact = Contact.new(contact_params)
           
-          if @Company.save
-               render json: @Company
+          if @Contact.save
+               render json: @Contact
           #     puts "create hit"
            else
-               render json: @Company.errors
+               render json: @Contact.errors
                puts "create failed"
            end
        end
        def show
-          @company = Company.find(params[:id])
-          render json: @company
+          @contact = Contact.find(params[:id])
+          render json: @contact
        end
        def update
-          puts "Update Hit"
-          Company.find(params[:id]).update(company_params)
+          puts "Contact Update Hit"
+          Contact.find(params[:id]).update(contact_params)
           
        end
        def destroy
-          puts "destroy hit"
-          Company.find(params[:id]).delete
+          puts "contact destroy hit"
+          Contact.find(params[:id]).delete
       
           render status: :ok
        end
   
        private
-       def company_params
-          params.require(:company).permit(:name)
+       def contact_params
+          params.require(:contact).permit(:lName, :fName, :title, :email, :linkedIn, :firstLetter, :firstResponse, :secondLetter, :secondResponse, :thirdLetter, :thirdResponse, :notes, :interview)
        end
 end
