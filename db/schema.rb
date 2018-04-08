@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20180407212239) do
   create_table "contacts", force: :cascade do |t|
     t.string "lName"
     t.string "fName"
+    t.string "title"
     t.string "email"
     t.boolean "linkedIn"
     t.boolean "firstLetter"

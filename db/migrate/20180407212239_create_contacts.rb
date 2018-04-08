@@ -3,6 +3,7 @@ class CreateContacts < ActiveRecord::Migration[5.1]
     create_table :contacts do |t|
       t.string :lName
       t.string :fName
+      t.string :title
       t.string :email
       t.boolean :linkedIn
       t.boolean :firstLetter
