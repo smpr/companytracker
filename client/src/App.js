@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
-import { Container, FormContainer, BodyContainer, Style, TextLabelStyle } from "../src/components/StyledComponents/DefaultStyle"
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
 import CompCreate from './components/Company/CompCreate'
 import CompHome from './components/Company/CompHome'
 import CompEdit from './components/Company/CompEdit'
@@ -9,8 +11,10 @@ import CompShow from './components/Company/CompShow'
 
 import ConHome from './components/Contact/ConHome'
 class App extends Component {
+  
   render() {
     return (
+      <MuiThemeProvider>
       <Router>
 
     
@@ -33,7 +37,7 @@ class App extends Component {
       </Switch>
     
     </Router>
-   
+   </MuiThemeProvider>
     );
   }
 }
