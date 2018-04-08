@@ -31,7 +31,7 @@ class CompHome extends Component {
                     {this.state.companies.map((company, index) => {
                         return (
                             <div>
-                                <Link to={`/Company/${company.id}`}>{company.name}</Link>
+                                <Link to={`/Company/${company.id}/Contact`}>{company.name}</Link>
                             </div>
                         )
                     })}
