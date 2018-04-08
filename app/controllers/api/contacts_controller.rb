@@ -10,7 +10,7 @@ class Api::ContactsController < ApplicationController
           
           if @Contact.save
                render json: @Contact
-          #     puts "create hit"
+              puts "create success hit"
            else
                render json: @Contact.errors
                puts "create failed"
