@@ -68,6 +68,7 @@ class ConShow extends Component {
                                 Interview Date: {this.state.contact.interview}
                             </div>
                             <div>
+                            <Link to={`/Company/${this.props.match.params.compId}/Contact/${this.props.match.params.conId}/Edit`}><RaisedButton onClick="" label="Edit" style={Style} /></Link>
                             <Link to={`/Company/${this.props.match.params.compId}/Contact`}><RaisedButton onClick="" label="Back" style={Style} /></Link>
                             </div>
                         </FormContainer>

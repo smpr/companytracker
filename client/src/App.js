@@ -12,6 +12,7 @@ import CompShow from './components/Company/CompShow'
 import ConHome from './components/Contact/ConHome'
 import ConCreate from './components/Contact/ConCreate'
 import ConShow from './components/Contact/ConShow'
+import ConEdit from './components/Contact/ConEdit'
 class App extends Component {
   
   render() {
@@ -32,7 +33,9 @@ class App extends Component {
         <Route exact path="/Company/:compId/Edit" component={CompEdit} />
         <Route exact path="/Company/:compId/Contact" component={ConHome} />
         <Route exact path="/Company/:compId/Contact/Create" component={ConCreate} />
+        <Route exact path="/Company/:compId/Contact/:conId/Edit" component={ConEdit} />
         <Route exact path="/Company/:compId/Contact/:conId" component={ConShow} />
+        
         <Route exact path="/Company/:compId" component={CompShow} />
  
         
