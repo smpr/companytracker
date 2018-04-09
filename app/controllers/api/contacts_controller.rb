@@ -1,7 +1,8 @@
 class Api::ContactsController < ApplicationController
     def index
         puts "Contact Index hit"
-        @contacts = Contact.all
+        @company = Company.find(params[:company_id])
+        @contacts = @company.contacts.all
         render json: @contacts
        end
        def create

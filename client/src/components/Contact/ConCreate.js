@@ -12,7 +12,7 @@ class ConCreate extends Component {
             title: "",
             email: "",
             linkedIn: "No",
-            firstLetter: "No",
+            firstLetter: "Yes",
             firstResponse: "No",
             secondLetter: "No",
             secondResponse: "No",

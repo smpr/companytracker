@@ -24,23 +24,26 @@ class ConHome extends Component {
     render() {
         return (
             <BodyContainer>
-            <Container>
-                <Link to={`/Company/${this.props.match.params.compId}/Contact/Create`}>Create a Contact</Link>
-                <FormContainer>
-            
-            <ul>
-                {this.state.contacts.map((contact, index) => {
-                    return (
+                <Container>
+                <Link to={`/Company/${this.props.match.params.compId}/Contact/Create`}>Create</Link>
+                    <FormContainer>
+
+                        <ul>
+                            {this.state.contacts.map((contact, index) => {
+                                return (
+                                    <div>
+                                        <Link to={`/Company/${this.props.match.params.compId}/Contact/${contact.id}`}>{contact.fName} {contact.lName}</Link>
+                                    </div>
+                                )
+                            })}
+
+                        </ul>
                         <div>
-                            <Link to={`/Company/${this.props.match.params.compId}/Contact/${contact.id}`}>{contact.fName} {contact.lName}</Link>
+                            <Link to={`/Company`}><RaisedButton onClick="" label="Back" style={Style} /></Link>
                         </div>
-                    )
-                })}
-                
-            </ul>
-            </FormContainer>
-            </Container>
-        </BodyContainer>
+                    </FormContainer>
+                </Container>
+            </BodyContainer>
         );
     }
 }

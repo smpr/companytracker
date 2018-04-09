@@ -9,6 +9,7 @@ class ConShow extends Component {
     state = {
         contact: {}
     }
+
     async componentWillMount() {
         try {
             const compId = this.props.match.params.compId
@@ -66,7 +67,9 @@ class ConShow extends Component {
                             <div>
                                 Interview Date: {this.state.contact.interview}
                             </div>
-
+                            <div>
+                            <Link to={`/Company/${this.props.match.params.compId}/Contact`}><RaisedButton onClick="" label="Back" style={Style} /></Link>
+                            </div>
                         </FormContainer>
                     </div>
                 </Container>
