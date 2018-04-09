@@ -5,11 +5,12 @@ import styled from 'styled-components'
 const BodyContainer = styled.div`
 display:flex;
 justify-content: space-around;
-
+background-color: #918F8F;
 height: 100vh;
 `
 const Container = styled.div`
 display: flex;
+
 flex-direction: column;
 justify-content: space-around;
 align-content: center;
@@ -17,6 +18,7 @@ align-content: center;
 const FormContainer = styled.div`
 display: flex;
 flex-direction: column;
+background-color: White;
 justify-content: space-around;
 align-content: center;
 width: 25vw;
