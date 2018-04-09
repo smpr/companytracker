@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reqId: MyString
+  title: MyString
+  dateApplied: MyString
+  rej: MyString
+  contactName: MyString
+  company: one
+
+two:
+  reqId: MyString
+  title: MyString
+  dateApplied: MyString
+  rej: MyString
+  contactName: MyString
+  company: two
