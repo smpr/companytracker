@@ -8,6 +8,7 @@ class ConEdit extends Component {
     state = {
         contact: {},
         redirectToContact: false,
+        redirectToCompany: false,
         togglePage2: false,
         togglePage3: false,
         togglePage4: false,
@@ -60,7 +61,7 @@ class ConEdit extends Component {
         const compId = this.props.match.params.compId
         const conId = this.props.match.params.conId
         await axios.delete(`/api/companies/${compId}/contacts/${conId}`)
-        this.setState({ redirectToContact: true })
+        this.setState({ redirectToCompany: true })
     }
     handleChange = (event) => {
         const attribute = event.target.name
@@ -289,6 +290,9 @@ class ConEdit extends Component {
             </BodyContainer >
         if (this.state.redirectToContact){
             return <Redirect to={`/Company/${this.props.match.params.compId}/Contact/${this.props.match.params.conId}`} />
+        }
+        if (this.state.redirectToCompany){
+            return <Redirect to={`/Company/${this.props.match.params.compId}/Contact`} />
         }
         const userView =
             this.state.togglePage2 ? page2
