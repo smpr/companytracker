@@ -25,7 +25,11 @@ class ConHome extends Component {
         return (
             <BodyContainer>
                 <Container>
-                <Link to={`/Company/${this.props.match.params.compId}/Contact/Create`}>Create</Link>
+                    <div>
+                <Link to={`/Company/${this.props.match.params.compId}/Contact/Create`}><RaisedButton onClick="" label="Create" style={Style} /></Link>
+                <Link to={`/Company/${this.props.match.params.compId}/Application`}><RaisedButton onClick="" label="Applications" style={Style} /></Link>
+                </div>
+
                     <FormContainer>
 
                         <ul>

@@ -153,7 +153,7 @@ class ResCreate extends Component {
             </BodyContainer>
         
         if (this.state.redirectToCompany) {
-            return <Redirect to={`/Company/${this.props.match.params.compId}`} />
+            return <Redirect to={`/Company/${this.props.match.params.compId}/Application`} />
         }
         const userView =
             this.state.togglePage2 ? page2
