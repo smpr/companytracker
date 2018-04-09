@@ -6,15 +6,11 @@ class Api::ContactsController < ApplicationController
        end
        def create
         puts "Contact Create Hit"
-          @Contact = Contact.new(contact_params)
+        @company = Company.find(params[:company_id])
+        puts @company
+          @contact = @company.contacts.create!(contact_params)
           
-          if @Contact.save
-               render json: @Contact
-              puts "create success hit"
-           else
-               render json: @Contact.errors
-               puts "create failed"
-           end
+ #
        end
        def show
           @contact = Contact.find(params[:id])

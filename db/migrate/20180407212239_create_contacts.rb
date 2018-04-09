@@ -5,13 +5,13 @@ class CreateContacts < ActiveRecord::Migration[5.1]
       t.string :fName
       t.string :title
       t.string :email
-      t.boolean :linkedIn
-      t.boolean :firstLetter
-      t.boolean :firstResponse
-      t.boolean :secondLetter
-      t.boolean :secondResponse
-      t.boolean :thirdLetter
-      t.boolean :thirdResponse
+      t.string :linkedIn
+      t.string :firstLetter
+      t.string :firstResponse
+      t.string :secondLetter
+      t.string :secondResponse
+      t.string :thirdLetter
+      t.string :thirdResponse
       t.string :notes
       t.string :interview
       t.references :company, foreign_key: true

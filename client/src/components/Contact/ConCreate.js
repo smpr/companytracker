@@ -11,13 +11,13 @@ class ConCreate extends Component {
             fName: "",
             title: "",
             email: "",
-            linkedIn: false,
-            firstLetter: false,
-            firstResponse: false,
-            secondLetter: false,
-            secondResponse: false,
-            thirdLetter: false,
-            thirdResponse: false,
+            linkedIn: "No",
+            firstLetter: "No",
+            firstResponse: "No",
+            secondLetter: "No",
+            secondResponse: "No",
+            thirdLetter: "No",
+            thirdResponse: "No",
             notes: "",
             interview: ""
         },
@@ -57,7 +57,7 @@ class ConCreate extends Component {
     // this handles the submit function specifically setup on the back end to allow this route directly
     handleSubmit = async (event) => {
         event.preventDefault()
-        await axios.post(`/api/companies/${this.props.match.params.compId}/contacts`, { company: this.state.company })
+        await axios.post(`/api/companies/${this.props.match.params.compId}/contacts`, { contact: this.state.contact })
         this.setState({
             redirectToContact: true
 
