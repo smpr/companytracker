@@ -21,7 +21,7 @@ class ConCreate extends Component {
             notes: "",
             interview: ""
         },
-        redirectToCompany: false,
+        redirectToContact: false,
         togglePage2: false,
         togglePage3: false,
         togglePage4: false,
@@ -280,7 +280,7 @@ class ConCreate extends Component {
                     </FormContainer >
                 </Container >
             </BodyContainer >
-        if (this.state.redirectToCompany) {
+        if (this.state.redirectToContact) {
             return <Redirect to={`/Company/${this.props.match.params.compId}/Contact`} />
         }
         const userView =
