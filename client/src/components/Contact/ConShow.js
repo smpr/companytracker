@@ -30,7 +30,43 @@ class ConShow extends Component {
                     Contact Info
                     
                         <FormContainer>
-                            Name: {this.state.contact.fName} {this.state.contact.lName}
+                            <div>
+                                Name: {this.state.contact.fName} {this.state.contact.lName}
+                            </div>
+                            <div>
+                                Title: {this.state.contact.title}
+                            </div>
+                            <div>
+                                Email: {this.state.contact.email}
+                            </div>
+                            <div>
+                                Conected on LinkedIn: {this.state.contact.linkedIn}
+                            </div>
+                            <div>
+                                First Letter: {this.state.contact.firstLetter}
+                            </div>
+                            <div>
+                                First Response: {this.state.contact.firstResponse}
+                            </div>
+                            <div>
+                                Second Letter: {this.state.contact.secondLetter}
+                            </div>
+                            <div>
+                                Second Response: {this.state.contact.secondResponse}
+                            </div>
+                            <div>
+                                Third Letter: {this.state.contact.thirdLetter}
+                            </div>
+                            <div>
+                                Third Response: {this.state.contact.thirdResponse}
+                            </div>
+                            <div>
+                                Notes: {this.state.contact.notes}
+                            </div>
+                            <div>
+                                Interview Date: {this.state.contact.interview}
+                            </div>
+
                         </FormContainer>
                     </div>
                 </Container>
