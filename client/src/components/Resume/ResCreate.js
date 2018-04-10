@@ -12,7 +12,7 @@ class ResCreate extends Component {
             title: "",
             dateApplied: "",
             rej: "",
-            contactName: "No",
+            contactName: "None",
 
         },
         redirectToCompany: false,
